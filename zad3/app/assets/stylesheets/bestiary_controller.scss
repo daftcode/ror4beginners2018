@@ -1,0 +1,55 @@
+// Place all the styles related to the BestiaryController controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$mainColor: #282C34;
+$accentColor: #FFD600;
+$tableAccentColor: #CCCCCC;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #eee;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    filter: drop-shadow(0 1.5rem 2.5rem black);
+}
+
+td, th {
+    border: 1px solid $mainColor;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: $tableAccentColor;
+}
+
+tr:nth-child(odd) {
+    background-color: $mainColor;
+    color: white;
+}
+
+tr:nth-child(1) {
+    color: black;
+    background-color: $accentColor;
+}
+
+main {
+    padding: 1.5em;
+}
+
+nav {
+    background: $mainColor;
+    color: white;
+
+    h2 {
+        margin: 0;
+        padding: 1em;
+    }
+
+}

@@ -1,0 +1,12 @@
+<main>
+  <% @teams.each do |team| %>
+  <table>
+    <% team.each do |player|%>
+      <tr class="<%= player.captain ? 'captain' : 'player' %>">
+        <td> <%= player.first_name %> </td> 
+    </tr>
+    <% end %>
+  </table>
+  <% end %>
+</main>
+

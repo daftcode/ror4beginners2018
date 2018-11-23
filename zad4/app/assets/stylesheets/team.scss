@@ -1,0 +1,44 @@
+// Place all the styles related to the Team controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: rgb(27, 27, 27);
+}
+
+main {
+  width: 80%;
+  background: rgb(37, 37, 37);
+  color: white;
+  margin: 3rem auto;  
+  display: flex;
+  align-items: center;
+  padding: 2em;
+}
+
+.captain {
+  background: rgba(230, 0, 0, 0.5);
+}
+
+.player {
+  background: #e77a1380;
+}
+
+
+table {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+
+  tr {
+    border: 1px solid white;
+    
+  }
+
+  td {
+    padding: 1em;
+    min-width: 8em;
+  }
+
+}

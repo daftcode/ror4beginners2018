@@ -1,0 +1,14 @@
+%table
+  %tr
+    - @player.attributes.keys.each do |key|
+      %th #{key}
+  %tr
+    - @player.attributes.values.each do |value|
+      %td #{value}
+  - if @stronger
+    = render partial: 'players/stronger_players'
+  - else
+    %tr
+      %td{colspan: @player.attributes.count} #{link_to('Stronger Players', players_path(stronger: true, id: @player.id))}
+  %tr
+    %td{colspan: @player.attributes.count} #{link_to('Back', players_path)}

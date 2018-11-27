@@ -1,0 +1,11 @@
+- if @stronger_players.length > 0
+  %tr
+    %td{colspan: @player.attributes.count} Stronger Players:
+    - @stronger_players.each do |player|
+      %tr
+        %td #{link_to(player.attributes.values.first,  players_path(id: player.attributes.values.first))}
+        - player.attributes.except("id").values.each do |value|
+          %td #{value}
+- else
+  %tr
+    %td{colspan: @player.attributes.count} #{@player.first_name} is the best player right now!

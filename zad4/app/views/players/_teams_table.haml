@@ -1,0 +1,17 @@
+%table
+  %tr
+    %th Team
+    %th Captain
+    - (@team_size - 1).times do |time|
+      %th Player #{time}
+    %th Team Power
+
+  - @teams.times do |time|
+    %tr
+      %td #{time + 1}
+      %td #{link_to( captain, players_path(id: captain_id))}
+      - (@team_size - 1).times do
+        %td #{link_to(player,  players_path(id: player_id))}
+      %td #{team_power}
+  %tr
+    %td{colspan: @team_size + 2} #{link_to("Shuffle",  players_path(shuffle: true))}

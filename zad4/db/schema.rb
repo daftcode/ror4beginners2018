@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_28_150305) do
+=======
+ActiveRecord::Schema.define(version: 2018_11_26_201718) do
+>>>>>>> add model + migration
 
   create_table "players", force: :cascade do |t|
     t.boolean "captain", default: false, null: false

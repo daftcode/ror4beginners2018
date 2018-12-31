@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :products, only: :index
+  resources :customers, only: :index do
+    scope module: :customers do
+      resources :products, only: :index
+    end
+  end
 end

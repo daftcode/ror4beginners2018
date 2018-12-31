@@ -1,0 +1,13 @@
+<h2>Customers</h2>
+<table>
+  <th>ID</th>
+  <th>Name</th>
+  <th>Products</th>
+  <% @customers.each do |customer| %>
+    <tr>
+      <td><%= customer.id %></td>
+      <td><%= customer.name %></td>
+      <td><%= link_to 'See products', customer_products_path(customer) %>
+    </tr>
+  <% end %>
+</table>

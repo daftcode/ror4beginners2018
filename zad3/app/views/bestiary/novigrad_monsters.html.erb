@@ -1,2 +1,22 @@
-<h1>BestiaryController#novigrad_monsters</h1>
-<p>Find me in app/views/bestiary_controller/novigrad_monsters.html.erb</p>
+<main>
+<h1>Novigrad monsters</h1>
+  <!-- TODO: ask if view is a good place for logic like this -->
+  <% if @monsters.empty? %>
+    <h2>We don't have any monsters from Novigrad!</h2>
+  <% else %>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Best slayer</th>
+  </tr>
+  <% @monsters.each do |monster| %>
+  <tr>
+    <td><%= monster[:id] %></td>
+    <td><%= monster[:name] %></td>
+    <td><%= monster[:best_slayer] %></td>
+  </tr>
+  <% end %>
+</table>
+  <% end %>
+</main>

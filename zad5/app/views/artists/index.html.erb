@@ -1,0 +1,24 @@
+<div class="container">
+    <%= link_to 'Add new artist', new_artist_url, class: 'btn btn-success pull-right' %>
+    <h2>Artist Table</h2>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th class="text-right">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @artists.each do |artist| %>
+            <tr>
+              <td><%= artist.name %></td>
+              <td class="text-right">
+                <%= link_to 'edit', edit_artist_path(artist), class: 'btn btn-warning' %>
+                <%= link_to 'remove', artist_path(artist), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are You sure?' }  %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+    </table>
+</div>

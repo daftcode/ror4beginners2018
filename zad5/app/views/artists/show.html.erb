@@ -1,0 +1,4 @@
+<div class="container">
+  <h2>Artist: <%= @artist.name %></h2>
+  <%= render partial: 'tracks_table', locals: {tracks: @artist.tracks} %>
+</div>

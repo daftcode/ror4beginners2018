@@ -1,0 +1,14 @@
+<h1 class="customer-title">Customers list:</h1>
+<% @customers.each do |customer| %>
+  <hero class="customer">
+    <h3 class="customer-h3"><%= customer.name %></h3>
+    <h3 class="customer-h3"><%= customer.email %></h3>
+    
+    
+      <%= link_to [customer, :products] do %>
+      <div class="customer-btn">
+        My Products!
+      </div>
+      <% end %>
+  </hero>
+<% end %>

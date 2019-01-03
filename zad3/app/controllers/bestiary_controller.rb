@@ -2,11 +2,13 @@
 
 class BestiaryController < ApplicationController
   def index
-
+    @monsters = monsters
   end
 
   def novigrad_monsters
-
+    @monsters = monsters.select do |monster| 
+      monster[:location].eql? 'Novigrad'
+    end
   end
 
   private

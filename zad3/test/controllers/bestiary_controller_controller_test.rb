@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class BestiaryControllerTest < ActionDispatch::IntegrationTest
+class BestiaryControllerControllerTest < ActionDispatch::IntegrationTest
   test 'should get index' do
     get bestiary_controller_index_url
     assert_response :success

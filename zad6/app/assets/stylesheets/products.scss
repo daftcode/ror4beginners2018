@@ -1,0 +1,30 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product {
+  display: block;
+  font-size: 3rem;
+  letter-spacing: .1em;
+  padding: 1.5rem;
+  border-bottom: 2px solid gray;
+  position: relative;
+}
+
+.owner {
+  font-size: 1.25rem;
+  padding: 1rem;
+  color: #118C86;
+}
+
+.without-owner {
+  font-size: 1.25rem;
+  padding: 1rem;
+  color: #212733;
+}
+
+.text-right {
+  text-align: right;
+  position: absolute;
+  right: 0;
+}

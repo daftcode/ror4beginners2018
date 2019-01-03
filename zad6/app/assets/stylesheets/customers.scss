@@ -1,0 +1,41 @@
+$btn-color: #6AAFFF;
+
+
+.customer {
+  padding: 2em;
+  border-bottom: 2px solid gray;
+  overflow: auto;
+  display: block;
+  min-height: 250px;
+
+  a:visited, a:link {
+      color: white;
+    }
+  
+  &-title {
+    font-size: 3.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  &-h3 {
+    font-size: 2rem;
+    color: #1F222D;
+  }
+
+  &-btn {
+    width: 200px;
+    text-align: center;
+    font-size: 25px;
+    padding: 12.5px;
+    border-radius: 12.5px;
+    display: inline-block;
+    background: $btn-color;
+
+    &:hover {
+      background-color: darken($btn-color, 25%);
+      cursor: pointer;
+    }
+
+  }
+
+}

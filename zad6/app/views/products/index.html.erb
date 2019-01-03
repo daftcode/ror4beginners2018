@@ -1,0 +1,25 @@
+<% content_for :header do %>
+<section class="hero is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Browse the products!
+      </h1>
+    </div>
+  </div>
+</section>
+<% end %>
+
+<div class="product-index-grid">
+  <% if @products.empty? %>
+    <h2>There are no products in stock, come back later</h2>
+  <% else %>
+  <% @products = filter_price @products, params[:price] if params[:price] %>
+    <% @products.each do |product| %>
+      <div class="product border-light">
+        <%= link_to product.name, product_path(product) %>
+        <span class="text-right"><%= number_to_currency(product.price, unit: "PLN", format: "%n %u") %></span>
+      </div>
+    <% end %>
+  <% end %>
+</div>

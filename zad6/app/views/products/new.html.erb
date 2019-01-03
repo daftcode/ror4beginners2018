@@ -1,0 +1,15 @@
+<%= content_for :header do %>
+<section class="hero is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Sell your product
+      </h1>
+    </div>
+  </div>
+</section>
+<% end %>
+
+<%= render 'form', product: @product %>
+
+<%= link_to 'Back', products_path %>

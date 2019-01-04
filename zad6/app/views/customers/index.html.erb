@@ -1,0 +1,14 @@
+<body>
+	<table>
+		<thead>
+			<td style="text-align: center; font-weight: bold; font-size: 1.5em">Customer name</td>
+		</thead>
+		<tbody >
+			<% @customers.each do |customer| %>
+			<tr>
+				<td style="text-align: center"><%= link_to customer.name, customer_products_url(customer) %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</body>

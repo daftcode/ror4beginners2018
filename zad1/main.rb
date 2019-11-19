@@ -1,21 +1,22 @@
-def sort_letters(string)
+#Zadanie 1
 
+#Czesc 1
+
+def sort_letters(string)
+	string.chars.sort.join
 end
+
+#Czesc 2
 
 def count_vowels(string)
-
+	string.count "aeiouy"
 end
+
+#Czesc 3
 
 def filter_odd(array)
-
+	array.select{|x| x.odd?} 
 end
 
-sort_letters('dcba') #=> 'abcd'
-sort_letters('zyx') #=> 'xyz'
 
-count_vowels('mmmm') #=> 0
-count_vowels('super') #=> 2
-count_vowels('super extra') #=> 4
 
-filter_odd([1, 2, 3, 4, 5]) #=> [1, 3, 5]
-filter_odd([6, 7, 9, 2, 6, 5]) #=> [7, 9, 5]
